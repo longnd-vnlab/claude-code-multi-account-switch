@@ -29,9 +29,15 @@ claude-switch personal
 
 ```bash
 claude-switch list      # List all accounts
+<img width="784" height="114" alt="Screenshot from 2025-12-22 22-51-28" src="https://github.com/user-attachments/assets/b4c71d33-23ae-4152-a529-b6d1c40e60de" />
+
 claude-switch status    # Show current account
+<img width="853" height="45" alt="Screenshot from 2025-12-22 22-51-04" src="https://github.com/user-attachments/assets/01e8f373-e175-4584-8992-935239903f34" />
+
 claude-next             # Switch to next account (round-robin)
+<img width="727" height="63" alt="Screenshot from 2025-12-22 22-50-34" src="https://github.com/user-attachments/assets/8cbcbe21-c347-4adc-aa66-cfbf6a5563b3" />
 claude-usage            # Show usage of all accounts
+<img width="880" height="306" alt="Screenshot from 2025-12-22 22-51-49" src="https://github.com/user-attachments/assets/d29e01ba-18d5-4b49-aa94-2da9d47ed362" />
 ```
 
 ## Sync Sessions Between Accounts
@@ -64,4 +70,7 @@ claude --resume
 - Each account keeps its own login token
 - Sync only shares conversation history, not tokens
 - `claude-usage` requires Python 3 (uses standard library only, no pip install needed)
+<img width="914" height="309" alt="Screenshot from 2025-12-22 22-49-47" src="https://github.com/user-attachments/assets/77b18cae-19ba-41f3-9cbe-6023637f3245" />
 # claude-code-multi-account-switch
+
+
