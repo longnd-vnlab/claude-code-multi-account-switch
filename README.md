@@ -78,7 +78,6 @@ claude --resume
 - Each account keeps its own login token
 - Sync only shares conversation history, not tokens
 - `claude-usage` requires Python 3 (uses standard library only, no pip install needed)
-<img width="914" height="309" alt="Screenshot from 2025-12-22 22-49-47" src="https://github.com/user-attachments/assets/77b18cae-19ba-41f3-9cbe-6023637f3245" />
 # claude-code-multi-account-switch
 
 
