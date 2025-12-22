@@ -9,6 +9,14 @@ Quickly switch between multiple Claude Code accounts.
 source ~/.bashrc
 ```
 
+The `init.sh` script automatically creates convenient aliases for all commands:
+- `claude-switch` → `claude-switch.sh`
+- `claude-sync` → `claude-sync.sh`
+- `claude-next` → `claude-next.sh`
+- `claude-usage` → `python3 claude-usage.py`
+
+After installation, you can run these commands from anywhere in your terminal!
+
 ## Usage
 
 ### 1. Save account
