@@ -109,7 +109,7 @@ def main():
             accounts.append(f[:-5])
     
     if not accounts:
-        print("❌ No accounts found")
+        print("[ERROR] No accounts found")
         return
     
     # Save current index
@@ -120,7 +120,7 @@ def main():
             current_idx = f.read().strip()
     
     for name in sorted(accounts):
-        print(f"━━━ {name} ━━━")
+        print(f"--- {name} ---")
         switch_account(name)
         
         try:

@@ -28,9 +28,9 @@ switch_account() {
     if [ -f "$BACKUP_DIR/$account.json" ]; then
         cp "$BACKUP_DIR/$account.json" "$CLAUDE_CONFIG"
         [ -d "$BACKUP_DIR/$account-dir" ] && { rm -rf "$CLAUDE_DIR"; cp -r "$BACKUP_DIR/$account-dir" "$CLAUDE_DIR"; }
-        echo "✅ Switched to $account"
+        echo "[OK] Switched to $account"
     else
-        echo "❌ Account '$account' not found. Save it first with: $0 save $account"
+        echo "[ERROR] Account '$account' not found. Save it first with: $0 save $account"
     fi
 }
 
@@ -39,7 +39,7 @@ case "$1" in
         [ -z "$2" ] && { echo "Usage: $0 save <account_name>"; exit 1; }
         cp "$CLAUDE_CONFIG" "$BACKUP_DIR/$2.json"
         [ -d "$CLAUDE_DIR" ] && { rm -rf "$BACKUP_DIR/$2-dir"; cp -r "$CLAUDE_DIR" "$BACKUP_DIR/$2-dir"; }
-        echo "✅ Saved as $2"
+        echo "[OK] Saved as $2"
         ;;
     list)
         echo "Accounts:"
@@ -47,9 +47,9 @@ case "$1" in
         ;;
     status)
         for f in "$BACKUP_DIR"/*.json; do
-            [ -f "$f" ] && cmp -s "$CLAUDE_CONFIG" "$f" 2>/dev/null && { echo "✅ Current: $(basename "$f" .json)"; exit 0; }
+            [ -f "$f" ] && cmp -s "$CLAUDE_CONFIG" "$f" 2>/dev/null && { echo "[OK] Current: $(basename "$f" .json)"; exit 0; }
         done
-        echo "❓ Unknown account"
+        echo "[?] Unknown account"
         ;;
     ""|help|-h|--help)
         echo "Usage: $0 <command>"

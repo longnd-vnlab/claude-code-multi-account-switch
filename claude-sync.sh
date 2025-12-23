@@ -28,12 +28,12 @@ sync_cross() {
             [ -d "$f" ] || continue
             mkdir -p "$f/projects"
             cp -r "$tmp"/* "$f/projects/"
-            echo "✅ Synced: $(basename "$f" -dir)"
+            echo "[OK] Synced: $(basename "$f" -dir)"
         done
     }
     
     rm -rf "$tmp"
-    echo "✅ Cross-sync complete!"
+    echo "[OK] Cross-sync complete!"
 }
 
 case "$1" in
