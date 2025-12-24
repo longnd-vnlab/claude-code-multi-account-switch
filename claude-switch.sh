@@ -51,11 +51,19 @@ case "$1" in
         done
         echo "[?] Unknown account"
         ;;
+    remove)
+        [ -z "$2" ] && { echo "Usage: $0 remove <account_name>"; exit 1; }
+        [ ! -f "$BACKUP_DIR/$2.json" ] && { echo "[ERROR] Account '$2' not found"; exit 1; }
+        rm -f "$BACKUP_DIR/$2.json"
+        rm -rf "$BACKUP_DIR/$2-dir"
+        echo "[OK] Removed $2"
+        ;;
     ""|help|-h|--help)
         echo "Usage: $0 <command>"
         echo ""
         echo "Commands:"
         echo "  save <name>   Save current account"
+        echo "  remove <name> Remove account"
         echo "  <name>        Switch to account"
         echo "  list          List all accounts"
         echo "  status        Show current account"
